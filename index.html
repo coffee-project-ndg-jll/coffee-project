@@ -9,7 +9,7 @@
     <h1>Coffee!</h1>
 
     <form>
-        <label for="roast-selection">Roast Type</label>
+        <label for="roast-selection">Roast</label>
         <select id="roast-selection">
             <option>all</option>
             <option>light</option>
@@ -17,20 +17,25 @@
             <option>dark</option>
         </select>
         <label for="coffee-name"> Coffee Name</label>
-        <input id="coffee-name" type="text" onkeyup="coffeeSearch()"/>
+        <input id="coffee-name" type="text"/>
         <button id="submit">Submit</button>
+
+
+        <h1>Add a Coffee</h1>
+        <label for="add-roast">Roast</label>
+        <select id="add-roast">
+            <option>light</option>
+            <option>medium</option>
+            <option>dark</option>
+        </select>
+        <label for="add-coffee">Name</label>
+        <input id="add-coffee" type="text"/>
+        <button id="submit-2" onclick="addCoffee()">Submit</button>
     </form>
 
-    <table id="table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+    <div id="coffees">
+
+    </div>
 
     <script src="main.js"></script>
 </body>
