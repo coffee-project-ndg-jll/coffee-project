@@ -9,16 +9,19 @@
     <h1>Coffee!</h1>
 
     <form>
-        <label for="roast-selection"></label>
+        <label for="roast-selection">Roast Type</label>
         <select id="roast-selection">
+            <option>all</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
-        <input id="submit" type="submit" />
+        <label for="coffee-name"> Coffee Name</label>
+        <input id="coffee-name" type="text" onkeyup="coffeeSearch()"/>
+        <button id="submit">Submit</button>
     </form>
 
-    <table>
+    <table id="table">
         <thead>
             <tr>
                 <th>ID</th>
