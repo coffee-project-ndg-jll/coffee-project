@@ -3,14 +3,54 @@ table {
     margin: 15px 0;
 }
 
-h1 {
-    text-align: center;
+/*-------------coffee font----------------*/
 
+h1 {
+    font-family: 'League Script', 'Helvetica Neue', sans-serif;
+    width: 100%;
+    font-size: 80px;
+    /*font-weight: bolder;*/
+    transform: rotate(-15deg);
+    margin: 0.3em auto;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0px 1px 1px #ddd,
+    0px 2px 1px #404040,
+    0px 3px 1px #515151,
+    0px 4px 1px #545454,
+    0px 5px 1px #5e5e5e,
+    0px 6px 1px black,
+    0px 7px 1px black,
+    0px 8px 3px black,
+    0px 9px 5px black,
+    0px 10px 7px black,
+    0px 11px 9px black,
+    0px 12px 11px black,
+    0px 13px 15px black;
+    transition:all .8s ease-in-out;
+    -o-transition:all .8s ease-in-out;
+    -moz-transition:all .8s ease-in-out;
+    -webkit-transition:all .8s ease-in-out;
 }
+
+/*-----------------------------------------*/
 
 form{
     float: right;
     width: 40%;
+    background-color: rgba(255, 255, 255, 0.50);
+    border: 7px black solid;
+}
+
+label {
+    color: black;
+}
+
+h2 {
+    color: black;
+    text-align: center;
+    font-family: 'Tauri', sans-serif;
+    margin-top: 1em;
 }
 
 div, .name, .roast {
@@ -19,8 +59,15 @@ div, .name, .roast {
 
 div#coffees{
     float: left;
-    width: 55%;
+    width: 50%;
 }
+
+div.border{
+    background-image: url("images/wood3.jpg");
+    border: 1px black solid;
+    width: 200px;
+}
+
 *{
     margin: 0.5em;
 }
@@ -28,8 +75,26 @@ div#coffees{
 select, input, button {
     display: block;
     width: 95%;
+    margin: .5em auto;
 }
+
 p {
-    color: gray;
+    color: white;
     font-size: 1em;
+    font-weight: bold;
+    text-shadow: 1px 1px black;
+}
+
+body {
+    background-image: url("images/beverage-caffeine-coffee-236838.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 0;
+    font-family: 'Tauri', sans-serif;
+}
+
+button{
+    background-color: #b1afaf;
+    color: black;
+    border-color: rgba(0, 0, 0, 0.71);
 }

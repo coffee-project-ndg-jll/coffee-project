@@ -2,8 +2,9 @@
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
-    html += '<h2 class="name">' + coffee.name + '</h2>';
-    html += '<p class="roast">' + coffee.roast + '</p>';
+
+    html += '<div class="border"><h3 class="name">' + coffee.name + '</h3>';
+    html += '<p class="roast">' + coffee.roast + '</p></div>';
     html += '</div>';
 
     return html;
@@ -64,6 +65,7 @@ function addCoffee(o) {
     coffees.push(appendCoffee);
 
     document.querySelector('#coffeeForm').reset();
+    updateCoffees(o);
 }
 
 function updateResult(query) {

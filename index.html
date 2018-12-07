@@ -4,33 +4,37 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=League+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tauri" rel="stylesheet">
+
+
 </head>
 <body>
-
     <h1>Coffee!</h1>
+
     <section>
     <form id="coffeeForm">
-        <label for="roast-selection">Roast</label>
-        <select id="roast-selection">
-            <option>all</option>
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <label for="coffee-name"> Coffee Name</label>
-        <input id="coffee-name" oninput="updateResult(this.value)" type="search" placeholder="Search..." />
-        <button id="submit" type="button">Submit</button>
+            <label for="roast-selection">Roast</label>
+            <select id="roast-selection">
+                <option>all</option>
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <label for="coffee-name"> Coffee Name</label>
+            <input id="coffee-name" oninput="updateResult(this.value)" type="search" placeholder="Search..." />
+            <button id="submit" type="button">Submit</button>
 
-        <h1>Add a Coffee</h1>
-        <label for="add-roast">Roast</label>
-        <select id="add-roast">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <label for="add-coffee">Name</label>
-        <input id="add-coffee" type="text"/>
-        <button id="submit2" type="button" >Submit</button>
+            <h2>Add a Coffee</h2>
+            <label for="add-roast">Roast</label>
+            <select id="add-roast">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <label for="add-coffee">Name</label>
+            <input id="add-coffee" type="search" placeholder="Add Coffee Name..."/>
+            <button id="submit2" type="button" >Submit</button>
     </form>
 
     <div id="coffees">
