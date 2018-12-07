@@ -52,8 +52,8 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'}
 ];
 
-function addCoffee() {
-    roastSelection.preventDefault();
+function addCoffee(o) {
+    o.preventDefault();
     var newRoast = document.querySelector('#add-roast');
     var newCoffee = document.querySelector('#add-coffee');
 
@@ -63,13 +63,34 @@ function addCoffee() {
         appendCoffee.roast = newRoast.value;
 
     coffees.push(appendCoffee);
+
+    document.querySelector('#coffeeForm').reset();
 }
 
+function updateResult(query) {
+    let resultList = document.querySelector("#coffees");
+    resultList.innerHTML = "";
+    coffees.forEach(function(object){
+        console.log(object.name);
+        query.trim().split(" ").map(function(word){
+            if(object.name.toLowerCase().indexOf(word.toLowerCase()) !== -1){
+                resultList.innerHTML += renderCoffee(object);
+            }
+        });
+    });
+}
+
+// var reset;
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 roastSelection.addEventListener('change', updateCoffees);
+var submitButton2 = document.querySelector('#submit2');
+
+
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+submitButton2.addEventListener('click', addCoffee);
+

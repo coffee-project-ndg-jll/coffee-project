@@ -8,7 +8,7 @@
 <body>
     <h1>Coffee!</h1>
 
-    <form>
+    <form id="coffeeForm">
         <label for="roast-selection">Roast</label>
         <select id="roast-selection">
             <option>all</option>
@@ -17,8 +17,8 @@
             <option>dark</option>
         </select>
         <label for="coffee-name"> Coffee Name</label>
-        <input id="coffee-name" type="text"/>
-        <button id="submit">Submit</button>
+        <input id="coffee-name" oninput="updateResult(this.value)" type="search" placeholder="Search..." />
+        <button id="submit" type="button">Submit</button>
 
         <h1>Add a Coffee</h1>
         <label for="add-roast">Roast</label>
@@ -29,7 +29,7 @@
         </select>
         <label for="add-coffee">Name</label>
         <input id="add-coffee" type="text"/>
-        <button id="submit2" onclick="addCoffee()">Submit</button>
+        <button id="submit2" type="button" >Submit</button>
     </form>
 
     <div id="coffees">
