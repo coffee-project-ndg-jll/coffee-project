@@ -3,15 +3,33 @@ table {
     margin: 15px 0;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+h1 {
+    text-align: center;
+
 }
 
-div {
+form{
+    float: right;
+    width: 40%;
+}
+
+div, .name, .roast {
     display: inline-block;
 }
 
-div.id, tr {
-    display: none;
+div#coffees{
+    float: left;
+    width: 55%;
+}
+*{
+    margin: 0.5em;
+}
+
+select, input, button {
+    display: block;
+    width: 95%;
+}
+p {
+    color: gray;
+    font-size: 1em;
 }
